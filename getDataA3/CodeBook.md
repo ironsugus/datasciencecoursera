@@ -15,10 +15,26 @@ Used fiels are:
 
 ### Source Code Description
 The script is divided into:
-- Read the data from the working directory.
-- Merges the training and the test sets to create one data set.
-- Extracts only the measurements on the mean and standard deviation for each measurement. 
-- Uses descriptive activity names to name the activities in the data set
-- Appropriately labels the data set with descriptive variable names. 
-- From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-- Write the casted data to castedX.txt file.
+#### Read the data from the working directory.
+Content of each described file is read into a dataframe.
+#### Merges the training and the test sets to create one data set.
+- X, y and subject fiels were merged with cbind
+- Rownames are renamed
+- test and train data are merged with rbind
+- features were named
+#### Extracts only the measurements on the mean and standard deviation for each measurement. 
+- based on columnames the reuired features are selected
+#### Uses descriptive activity names to name the activities in the data set
+- rename the activities with the lables
+#### Appropriately labels the data set with descriptive variable names. 
+- done in merge step
+#### From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+- melt the data frame with id subject and activity
+- cast the molten 
+#### Write the casted data to castedX.txt file.
+- write the table to file
+
+For any details I encourage you to have a look into the script.
+
+Thanks and good luck 
+ironsugus
