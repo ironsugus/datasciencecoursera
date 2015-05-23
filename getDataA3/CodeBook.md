@@ -22,7 +22,7 @@ Content of each described file is read into a dataframe.
 - Rownames are renamed
 - test and train data are merged with rbind
 - features were named
-- 
+
 #### Extracts only the measurements on the mean and standard deviation for each measurement. 
 - based on columnames the reuired features are selected
 
