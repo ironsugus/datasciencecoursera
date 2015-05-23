@@ -4,11 +4,6 @@
 library(dplyr)
 #install.packages("reshape")
 library(reshape)
-
-# save and set current wd
-saveWd <- getwd()
-setwd(dirname(parent.frame(2)$ofile))
-message("Working directory is set to ", getwd())
     
 readData <- function(){
     rowcount <- -1
@@ -65,6 +60,3 @@ castedX  <- cast(moltenX, Activity + variable ~ Subject, mean)
 # write the cast to file
 write.table(castedX, "castedX.txt",row.names=FALSE)
 
-# restore wd
-setwd(saveWd)
-message("Working directory is restored to ", getwd()) 
